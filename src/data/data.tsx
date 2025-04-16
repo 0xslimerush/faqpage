@@ -104,8 +104,27 @@ export const faqData: FAQItem[] = [
   },
   {
     question: "What networks does Fareplay support for funding my account?",
-    answer:
-      "Fareplay exclusively operates on Arbitrum, a layer-2 network known for its fast transactions and low fees. To fund your account, you'll need to send USDC on the Arbitrum network to your Privy wallet address. If you're new to Arbitrum, you can get started in two ways: 1) Purchase USDC directly through our integrated MoonPay service using your credit card, or 2) Transfer USDC from an exchange that supports Arbitrum withdrawals (like Coinbase or Binance). Remember to always select 'Arbitrum network' when sending funds to avoid any loss of assets.",
+    answer: (
+      <>
+        <p className="mb-4">
+          Fareplay exclusively operates on Arbitrum, a layer-2 network known for
+          its fast transactions and low fees. To fund your account, you'll need
+          to send USDC on the Arbitrum network to your Privy wallet address. If
+          you're new to Arbitrum, you can get started in two ways:
+        </p>
+        <ol className="list-decimal ml-4">
+          <li className="mb-4">
+            Purchase USDC directly through our integrated MoonPay service using
+            your credit card
+          </li>
+          <li className="mb-4">
+            Transfer USDC from an exchange that supports Arbitrum withdrawals
+            (like Coinbase or Binance). Remember to always select 'Arbitrum
+            network' when sending funds to avoid any loss of assets.
+          </li>
+        </ol>
+      </>
+    ),
   },
   {
     question: "How do I find my wallet address in Privy?",
