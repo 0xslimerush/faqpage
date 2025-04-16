@@ -128,8 +128,24 @@ export const faqData: FAQItem[] = [
   },
   {
     question: "How do I find my wallet address in Privy?",
-    answer:
-      "After signing up and completing the onboarding process, click the 'Add Funds' button in your account dashboard. This will open a modal showing your unique Privy wallet address. You can easily copy this address to send funds from an exchange or another wallet. The address will always start with '0x' and is specific to your account on the Arbitrum network. Pro tip: Always double-check the address when copying to ensure accurate transfers.",
+    answer: (
+      <>
+        <p className="mb-4">
+          After signing up and completing the onboarding process, click the 'Add
+          Funds' button in your account dashboard. This will open a modal
+          showing your unique Privy wallet address.
+        </p>
+        <p className="mb-4">
+          You can easily copy this address to send funds from an exchange or
+          another wallet. The address will always start with '0x' and is
+          specific to your account on the Arbitrum network.
+        </p>
+        <p className="mb-4">
+          Pro tip: Always double-check the address when copying to ensure
+          accurate transfers.
+        </p>
+      </>
+    ),
   },
   {
     question:
