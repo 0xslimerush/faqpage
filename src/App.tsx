@@ -10,7 +10,7 @@ function App() {
           Frequently Asked Questions
         </h1>
         <p className="text-center text-gray-400 mb-12 max-w-2xl mx-auto">
-          Everything you need to know about Fareplay's revolutionary ticketing platform
+          Everything you need to know about Fareplay's revolutionary mint burn protocol
         </p>
         <FAQ />
       </div>
