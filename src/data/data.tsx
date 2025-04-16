@@ -6,8 +6,53 @@ interface FAQItem {
 export const faqData: FAQItem[] = [
   {
     question: "What is Fareplay?",
-    answer:
-      "Fareplay is revolutionizing online gaming by creating the world's first truly decentralized casino platform. Here's what makes us unique:\n\n1) Smart Contract Gaming: Every game operates through transparent, audited smart contracts\n\n2) No House Advantage: Unlike traditional casinos, we don't maintain a treasury or hold player funds\n\n3) Innovative Tokenomics: Our FARE token system:\n- Mints tokens when players win\n- Burns tokens when players lose\n- Creates a naturally deflationary economy\n\n4) Fair Play Guarantee:\n- All randomness is verified by Chainlink\n- Complete transparency in odds and outcomes\n- No hidden fees or manipulated results\n\n5) Community Focused:\n- Anyone can become a casino host\n- Players maintain full control of their funds\n- Regular updates and new games based on community feedback\n\nFareplay combines the excitement of casino gaming with the security and transparency of blockchain technology.",
+    answer: (
+      <>
+        <p className="mb-4">
+          Fareplay is revolutionizing online gaming by creating the world's
+          first truly decentralized casino platform. Here's what makes us
+          unique:
+        </p>
+        <ol className="list-decimal ml-4">
+          <li className="my-4">
+            Smart Contract Gaming: Every game operates through transparent,
+            audited smart contracts
+          </li>
+          <li className="my-4">
+            No House Advantage: Unlike traditional casinos, we don't maintain a
+            treasury or hold player funds
+          </li>
+          <li className="my-4">
+            Innovative Tokenomics: Our FARE token system:
+            <ul className="list-disc ml-4">
+              <li>Mints tokens when players win</li>
+              <li>Burns tokens when players lose</li>
+              <li>Creates a naturally deflationary economy</li>
+            </ul>
+          </li>
+          <li className="my-4">
+            Fair Play Guarantee:
+            <ul className="list-disc ml-4">
+              <li>All randomness is verified by Chainlink</li>
+              <li>Complete transparency in odds and outcomes</li>
+              <li>No hidden fees or manipulated results</li>
+            </ul>
+          </li>
+          <li>
+            Community Focused:
+            <ul className="list-disc ml-4">
+              <li>Anyone can become a casino host</li>
+              <li>Players maintain full control of their funds</li>
+              <li>Regular updates and new games based on community feedback</li>
+              <li>
+                Fareplay combines the excitement of casino gaming with the
+                security and transparency of blockchain technology.
+              </li>
+            </ul>
+          </li>
+        </ol>
+      </>
+    ),
   },
   {
     question: "What is Privy and how does Fareplay use it?",
