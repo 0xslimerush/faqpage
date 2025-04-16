@@ -14,15 +14,15 @@ export const faqData: FAQItem[] = [
           unique:
         </p>
         <ol className="list-decimal ml-4">
-          <li className="my-4">
+          <li className="mb-4">
             Smart Contract Gaming: Every game operates through transparent,
             audited smart contracts
           </li>
-          <li className="my-4">
+          <li className="mb-4">
             No House Advantage: Unlike traditional casinos, we don't maintain a
             treasury or hold player funds
           </li>
-          <li className="my-4">
+          <li className="mb-4">
             Innovative Tokenomics: Our FARE token system:
             <ul className="list-disc ml-4">
               <li>Mints tokens when players win</li>
@@ -30,7 +30,7 @@ export const faqData: FAQItem[] = [
               <li>Creates a naturally deflationary economy</li>
             </ul>
           </li>
-          <li className="my-4">
+          <li className="mb-4">
             Fair Play Guarantee:
             <ul className="list-disc ml-4">
               <li>All randomness is verified by Chainlink</li>
@@ -79,8 +79,28 @@ export const faqData: FAQItem[] = [
   },
   {
     question: "Why does Fareplay use Privy?",
-    answer:
-      "We chose Privy because it solves the biggest challenge in web3 gaming: complexity. Traditional crypto wallets can be intimidating and risky for new users. With Privy, you get three major benefits: 1) Simple social login that feels familiar, 2) A secure wallet that's automatically created and managed for you, and 3) Complete ownership of your funds - Fareplay never holds your money, it stays in your Privy wallet that only you control. This approach combines the best of web2 convenience with web3 security, making it easier for anyone to start playing without compromising on safety or control.",
+    answer: (
+      <>
+        <p className="mb-4">
+          We chose Privy because it solves the biggest challenge in web3 gaming:
+          complexity. Traditional crypto wallets can be intimidating and risky
+          for new users. With Privy, you get three major benefits:
+        </p>
+        <ol className="list-decimal ml-4">
+          <li className="mb-4">Simple social login that feels familiar</li>
+          <li className="mb-4">
+            A secure wallet that's automatically created and managed for you
+          </li>
+          <li className="mb-4">
+            Complete ownership of your funds - Fareplay never holds your money,
+            it stays in your Privy wallet that only you control. This approach
+            combines the best of web2 convenience with web3 security, making it
+            easier for anyone to start playing without compromising on safety or
+            control.
+          </li>
+        </ol>
+      </>
+    ),
   },
   {
     question: "What networks does Fareplay support for funding my account?",
