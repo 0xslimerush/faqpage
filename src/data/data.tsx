@@ -56,8 +56,26 @@ export const faqData: FAQItem[] = [
   },
   {
     question: "What is Privy and how does Fareplay use it?",
-    answer:
-      "Privy is our secure wallet solution that makes getting started with Fareplay incredibly simple. Instead of dealing with complicated crypto wallets, you can sign in with familiar methods like Google, Discord, or email. Once you sign up, Privy automatically creates a secure web3 wallet for you - no seed phrases or technical knowledge required. This wallet is specifically designed for Fareplay, allowing you to deposit funds and start playing games immediately. Think of it as your personal gaming account that combines the security of blockchain with the simplicity of traditional login methods.",
+    answer: (
+      <>
+        <p className="mb-4">
+          Privy is our secure wallet solution that makes getting started with
+          Fareplay incredibly simple. Instead of dealing with complicated crypto
+          wallets, you can sign in with familiar methods like Google, Discord,
+          or email.
+        </p>
+        <p className="mb-4">
+          Once you sign up, Privy automatically creates a secure web3 wallet for
+          you - no seed phrases or technical knowledge required. This wallet is
+          specifically designed for Fareplay, allowing you to deposit funds and
+          start playing games immediately.
+        </p>
+        <p className="mb-4">
+          Think of it as your personal gaming account that combines the security
+          of blockchain with the simplicity of traditional login methods.
+        </p>
+      </>
+    ),
   },
   {
     question: "Why does Fareplay use Privy?",
