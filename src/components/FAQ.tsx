@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { ChevronDown } from "lucide-react";
 import { faqData } from "../data/data";
-
+import { SFAQContainer, SFAQItem } from "../styles/styled";
 
 const FAQ: React.FC = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
@@ -11,33 +11,27 @@ const FAQ: React.FC = () => {
   };
 
   return (
-    <div className="space-y-4 max-w-3xl mx-auto">
+    <SFAQContainer>
       {faqData.map((faq, index) => (
-        <div
-          key={index}
-          className="border border-gray-800 rounded-lg overflow-hidden bg-[#13141A] transition-all duration-300 hover:border-[#FF3366]"
-        >
-          <button
-            className="w-full px-6 py-4 text-left flex justify-between items-center"
-            onClick={() => toggleFAQ(index)}
-          >
-            <span className="text-lg font-medium">{faq.question}</span>
+        <SFAQItem key={index} className="transition-all duration-300">
+          <button onClick={() => toggleFAQ(index)}>
+            <span>{faq.question}</span>
             <ChevronDown
-              className={`w-5 h-5 text-[#FF3366] transition-transform duration-300 ${
+              className={` transition-transform duration-300 ${
                 openIndex === index ? "transform rotate-180" : ""
               }`}
             />
           </button>
           <div
-            className={`px-6 transition-all duration-300 ease-in-out ${
+            className={`transition-all duration-300 ease-in-out ${
               openIndex === index ? "py-4" : "max-h-0"
-            } overflow-hidden`}
+            }`}
           >
-            <p className="text-gray-400 whitespace-pre-line">{faq.answer}</p>
+            <p>{faq.answer}</p>
           </div>
-        </div>
+        </SFAQItem>
       ))}
-    </div>
+    </SFAQContainer>
   );
 };
 
