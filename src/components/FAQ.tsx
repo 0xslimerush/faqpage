@@ -1,6 +1,11 @@
 import React, { useState } from "react";
-import { ChevronDown } from "lucide-react";
-import { SFAQAnswer, SFAQContainer, SFAQItem } from "../styles/styled";
+import {
+  SFAQAnswer,
+  SFAQWrapper,
+  SFAQItem,
+  SFAQContainer,
+  SChevronDown,
+} from "../styles/styled";
 import { FaqItem } from "../types/types";
 import { faqData } from "../data/FaqData";
 import { renderFeaturesList } from "./FAQItems";
@@ -15,33 +20,26 @@ const FAQ: React.FC = () => {
   };
 
   return (
-    <SFAQContainer>
+    <SFAQWrapper>
       {faqs.map((faq, index) => (
-        <SFAQItem key={index} className="transition-all duration-300">
+        <SFAQItem key={index}>
           <button onClick={() => toggleFAQ(index)}>
             <span>{faq.question}</span>
-            <ChevronDown
-              className={` transition-transform duration-300 ${
-                openIndex === index ? "transform rotate-180" : ""
-              }`}
-            />
+            <SChevronDown isOpen={openIndex === index} />
           </button>
-          <div
-            className={`transition-all duration-300 ease-in-out ${
-              openIndex === index ? "py-4" : "max-h-0"
-            }`}
-          >
+          <SFAQContainer isOpen={openIndex === index}>
             <SFAQAnswer>
               {faq.answer.info && <p>{faq.answer.info}</p>}
               {faq.answer.info_2 && <p>{faq.answer.info_2}</p>}
               {faq.answer.info_3 && <p>{faq.answer.info_3}</p>}
               {faq.answer.info_4 && <p>{faq.answer.info_4}</p>}
               {faq.answer.features && renderFeaturesList(faq.answer.features)}
+              {faq.answer.bottom_info && <p>{faq.answer.bottom_info}</p>}
             </SFAQAnswer>
-          </div>
+          </SFAQContainer>
         </SFAQItem>
       ))}
-    </SFAQContainer>
+    </SFAQWrapper>
   );
 };
 

@@ -20,6 +20,7 @@ export interface Answer {
   info_3?: string;
   info_4?: string;
   features?: Feature[];
+  bottom_info?: string;
 }
 
 export interface FaqItem {

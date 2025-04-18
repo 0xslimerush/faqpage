@@ -35,12 +35,12 @@ export const faqData: FaqData = {
                 bullet_item_2: "Players maintain full control of their funds",
                 bullet_item_3:
                   "Regular updates and new games based on community feedback",
-                bullet_item_4:
-                  "Fareplay combines the excitement of casino gaming with the security and transparency of blockchain technology.",
               },
             ],
           },
         ],
+        bottom_info:
+          "Fareplay combines the excitement of casino gaming with the security and transparency of blockchain technology.",
       },
     },
     {
@@ -134,9 +134,11 @@ export const faqData: FaqData = {
             list_item_3:
               "The FARE token contract address is: 0xFA4E888d9fBBcF4AfA7BF057ECfe59Ed04619e62",
             list_item_4:
-              "Swap any supported token (USDC recommended) for FARE. Always verify the contract address matches to avoid scams. The official FARE token will show verified status on Uniswap.",
+              "Swap any supported token (USDC recommended) for FARE.",
           },
         ],
+        bottom_info:
+          "Always verify the contract address matches to avoid scams. The official FARE token will show verified status on Uniswap.",
       },
     },
     {
@@ -151,10 +153,10 @@ export const faqData: FaqData = {
               "Use Uniswap to swap FARE for other tokens on Arbitrum",
             list_item_3:
               "Hold your FARE tokens in your Privy wallet for future games or potential appreciation. To withdraw, simply click the 'Withdraw' button in your account dashboard, enter the destination address, and confirm the transaction.",
-            list_item_4:
-              "Always verify the receiving address and network (Arbitrum) before confirming any withdrawal.",
           },
         ],
+        bottom_info:
+          "Always verify the receiving address and network (Arbitrum) before confirming any withdrawal.",
       },
     },
     {
