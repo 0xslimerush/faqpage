@@ -1,7 +1,11 @@
 import React, { useState } from "react";
 import { ChevronDown } from "lucide-react";
-import { faqData } from "../data/data";
-import { SFAQContainer, SFAQItem } from "../styles/styled";
+import { SFAQAnswer, SFAQContainer, SFAQItem } from "../styles/styled";
+import { FaqItem } from "../types/types";
+import { faqData } from "../data/FaqData";
+import { renderFeaturesList } from "./FAQItems";
+
+const faqs: FaqItem[] = faqData.FaqData;
 
 const FAQ: React.FC = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
@@ -12,7 +16,7 @@ const FAQ: React.FC = () => {
 
   return (
     <SFAQContainer>
-      {faqData.map((faq, index) => (
+      {faqs.map((faq, index) => (
         <SFAQItem key={index} className="transition-all duration-300">
           <button onClick={() => toggleFAQ(index)}>
             <span>{faq.question}</span>
@@ -27,7 +31,13 @@ const FAQ: React.FC = () => {
               openIndex === index ? "py-4" : "max-h-0"
             }`}
           >
-            <p>{faq.answer}</p>
+            <SFAQAnswer>
+              {faq.answer.info && <p>{faq.answer.info}</p>}
+              {faq.answer.info_2 && <p>{faq.answer.info_2}</p>}
+              {faq.answer.info_3 && <p>{faq.answer.info_3}</p>}
+              {faq.answer.info_4 && <p>{faq.answer.info_4}</p>}
+              {faq.answer.features && renderFeaturesList(faq.answer.features)}
+            </SFAQAnswer>
           </div>
         </SFAQItem>
       ))}
