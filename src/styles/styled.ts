@@ -7,7 +7,7 @@ export const SAppWrapper = styled.div`
   color: white;
 `;
 
-export const SHeader = styled.div`
+export const SAppContainer = styled.div`
   max-width: 1280px;
   margin-inline: auto;
   padding: 64px 16px;
